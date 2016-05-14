@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  match 'callback', to: 'items#create', via: :post
+  match 'messenger/webook', to: 'messenger#webhook', via: :post
   resources :items
   root to: 'items#index'
 
