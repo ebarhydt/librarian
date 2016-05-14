@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   match 'messenger/webook', to: 'messenger#webhook', via: :post
+  match 'messenger/test_message', to: 'messenger#test_message', via: :post
   resources :items
   root to: 'items#index'
 

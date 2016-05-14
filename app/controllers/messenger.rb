@@ -8,7 +8,8 @@ class MessengerController < Messenger::MessengerController
 	Messenger::Request.new(
 		Messenger::Elements::Text.new(text: 'some text'),
       		fb_params.first_entry.sender_id
-    )
-  )
+			    )
+			)
       render nothing: true status: 200
+      end
 end
