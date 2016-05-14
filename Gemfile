@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'haml'
-gem 'rest-client'
+gem 'rest-client', '1.6.9'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
