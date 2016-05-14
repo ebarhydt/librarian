@@ -3,6 +3,5 @@ class MessengerController < Messenger::MessengerController
     render nothing: true, status: 200
     #AWAITING STRUCTURE OF PARAMS
     #Item.parse_message()
-    puts "params are " + params
   end
 end
