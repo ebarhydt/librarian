@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  get 'listen/index'
-  root 'listen#index'
+  match 'callback', to: 'items#create', via: :post
+  resources :items
+  root to: 'items#index'
+
   mount Messenger::Engine, at: "/messenger"
 
   # The priority is based upon order of creation: first created -> highest priority.
