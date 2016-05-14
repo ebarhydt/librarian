@@ -6,6 +6,5 @@ class ItemsController < ApplicationController
 
   def callback
     render nothing: true
-    Item.parse_message(params[:message], params[:'_id'])
   end
 end
