@@ -3,6 +3,7 @@ class MessengerController < Messenger::MessengerController
     render nothing: true, status: 200
     puts fb_params.entries.each do |entry|
       puts entry
+    end
     #Item.parse_message()
   end
 end
