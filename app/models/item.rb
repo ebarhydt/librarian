@@ -6,7 +6,13 @@ class Item < ActiveRecord::Base
       Item.create(key: item[0], value: item[1], owner: owner)
       puts Item.all
     else
-      # assume it's a key and retrieve the value
+      item = Item.find_by(key: msg)
+      Messenger::Client.send(
+        Messenger::Request.new(
+          Messenger::Elements::Text.new(text: item.value),
+          owner
+        )
+      )
     end
   end
 end
