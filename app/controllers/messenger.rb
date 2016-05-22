@@ -33,6 +33,6 @@ class MessengerController < Messenger::MessengerController
     end
     puts @message
     puts @owner
-    # Item.parse_message(@message, @owner)
+    Item.parse_message(@message, @owner)
   end
 end
