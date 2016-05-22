@@ -5,6 +5,6 @@ class MessengerController < Messenger::MessengerController
     puts @message
     @owner = params["entry"].first["messaging"].first["sender"]["id"]
     puts @owner
-    # Item.parse_message(@message, @owner)
+    Item.parse_message(@message, @owner)
   end
 end
