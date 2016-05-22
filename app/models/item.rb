@@ -1,6 +1,6 @@
 class Item < ActiveRecord::Base
 
-  def self.parse_message(msg = nil, owner = nil)
+  def self.parse_message(msg, owner)
     if msg.include?(" is ")
       item = msg.split(" is ")
       Item.create(key: item[0], value: item[1], owner: owner)
