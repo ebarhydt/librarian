@@ -4,6 +4,6 @@ class MessengerController < Messenger::MessengerController
     # @message = params["entry"].first["messaging"].first["message"]["text"]
     # puts @message
     #AWAITING STRUCTURE OF PARAMS
-    puts "facebook params are " + fb_params
+    puts "facebook params are " + fb_params.to_s
   end
 end
