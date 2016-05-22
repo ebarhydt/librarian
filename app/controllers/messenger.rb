@@ -3,7 +3,8 @@ class MessengerController < Messenger::MessengerController
     render nothing: true, status: 200
     @message = params["entry"].first["messaging"].first["message"]["text"]
     puts @message
-    #AWAITING STRUCTURE OF PARAMS
-    puts "facebook params are " + fb_params.to_s
+    @owner = params["entry"].first["messaging"].first["sender"]["id"]
+    puts @owner
+    Item.parse_message(@message, @owner)
   end
 end
